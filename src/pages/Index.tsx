@@ -624,9 +624,11 @@ const Index = () => {
           <img
             src="https://images.unsplash.com/photo-1518770660439-4636190af475"
             alt="Cybersecurity Background"
-            className="w-full h-full object-cover opacity-20 dark:opacity-10 animate-pulse-glow"
+            className="w-full h-full object-cover opacity-50 dark:opacity-20 animate-pulse-glow"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-background/50 to-transparent"></div>
+
+          {/* Dark overlay that adjusts based on mode */}
+          <div className="absolute inset-0 bg-black/40 dark:bg-black/40 mix-blend-multiply"></div>
         </div>
 
         {/* Floating Elements */}
@@ -659,7 +661,7 @@ const Index = () => {
             </h1>
 
             <p
-              className="text-lg md:text-lg text-muted-foreground mb-6 max-w-3xl mx-auto font-medium animate-fade-in"
+              className="text-lg md:text-lg text-muted-foreground mb-6 max-w-3xl mx-auto font-medium animate-fade-in text-white"
               style={{ animationDelay: "0.5s" }}
             >
               Your trusted cybersecurity partner, protecting businesses from
