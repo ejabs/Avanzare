@@ -1463,8 +1463,17 @@ const Index = () => {
           <div className="grid md:grid-cols-4 gap-8">
             <div>
               <div className="flex items-center space-x-2 mb-4">
-                <Shield className="h-6 w-6 text-primary" />
-                <span className="text-xl font-bold">Avanzare</span>
+                <Link
+                  to="/"
+                  onClick={scrollToTop}
+                  className="flex items-center space-x-2 hover:opacity-80 transition-all duration-300 transform hover:scale-105 group"
+                >
+                  <img
+                    src="https://res.cloudinary.com/daxeovezx/image/upload/v1751281242/Screenshot_2025-06-30_115931_e7kcqy.png"
+                    alt="Avanzare Logo"
+                    className="h-12 w-auto transition-all duration-300 dark:invert"
+                  />
+                </Link>
               </div>
               <p className="text-muted-foreground text-sm mb-4">
                 Protecting businesses from cyber threats with expert security
