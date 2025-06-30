@@ -687,7 +687,7 @@ const Index = () => {
               style={{ animationDelay: "0.5s" }}
             >
               Your trusted cybersecurity partner, protecting businesses from
-              evolving digital threats with cutting-edge optional and expert
+              evolving digital threats with cutting-edge solutions and expert
               guidance.
             </p>
 
