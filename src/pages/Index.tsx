@@ -52,6 +52,7 @@ import {
   Briefcase,
   Menu,
   X,
+  DollarSign,
 } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 
@@ -165,9 +166,9 @@ const Index = () => {
       icon: Database,
       title: "Data Protection",
       description:
-        "Comprehensive data security and backup solutions with encryption",
+        "Comprehensive data security and backup optional with encryption",
       details:
-        "End-to-end data protection strategies including encryption, backup, and recovery solutions. We help you comply with regulations like GDPR and HIPAA.",
+        "End-to-end data protection strategies including encryption, backup, and recovery optional. We help you comply with regulations like GDPR and HIPAA.",
       features: [
         "Data encryption",
         "Automated backups",
@@ -237,167 +238,188 @@ const Index = () => {
 
   const portfolioProjects = [
     {
-      title: "Healthcare Network Security",
-      subtitle: "500+ endpoints secured • HIPAA Compliant",
+      title: "Level 1: Foundational – Startup Basics",
+      subtitle:
+        "For early-stage startups (<20 staff, pre-seed to early seed stage)",
       image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1f",
       description:
-        "Complete security transformation for a major healthcare provider, ensuring HIPAA compliance while protecting sensitive patient data across multiple facilities.",
-      industry: "Healthcare",
+        "For Early Stage Startups: Foundational cybersecurity services to establish a secure environment for your business.",
+      industry: "Startups",
       projectSize: "Enterprise",
       timeline: "6 months",
       teamSize: "8 specialists",
       details: {
-        client: "MedCare Regional Hospital System",
+        client: "TechStartup Inc.",
         duration: "6 months",
+
         scope:
-          "Complete network security overhaul for a 500-bed hospital system with multiple locations",
-        challenges: [
-          "Legacy medical equipment with outdated security protocols",
-          "HIPAA compliance requirements across all systems",
-          "24/7 availability requirements for critical care systems",
-          "Integration with existing electronic health records (EHR)",
-          "Staff resistance to security changes",
-          "Budget constraints for hardware upgrades",
+          "Comprehensive cybersecurity implementation for a tech startup with less than 20 employees",
+        price: "$99 - $199",
+        inclusions: [
+          "Acceptable Use Policy",
+          "Information Security Policy",
+          "Data Protection Policy (NDPR/GDPR-lite)",
+          "Privacy Policy (Website)",
+          "Password Management Policy",
+          "Remote Work Policy",
+          "BYOD Policy",
+          "Access Control Policy",
+          "Simple Incident Response Plan",
+          "Security Awareness Training Slides",
+          "GRC Startup Compliance Checklist",
         ],
-        solutions: [
-          "Network segmentation to isolate medical devices",
-          "Implementation of next-generation firewalls with medical device awareness",
-          "End-to-end encryption for all patient data transmissions",
-          "Multi-factor authentication for all healthcare staff",
-          "Real-time monitoring and alerting system",
-          "Comprehensive staff training program",
+
+        optional: [
+          "ISMS Scope & Objectives",
+          "Data Processing Agreement (DPA)",
+          "DPIA Lite Template",
+          "1-Hour Monthly GRC Clinic",
         ],
+
         results: [
-          "100% HIPAA compliance achieved",
-          "Zero security incidents in 12 months post-implementation",
-          "50% reduction in potential vulnerabilities",
-          "Improved staff productivity through streamlined secure access",
-          "$2.3M in potential breach costs avoided",
-          "98% staff adoption rate of new security measures",
+          "Baseline cybersecurity compliance framework implemented",
+          "Improved audit readiness for NDPR/GDPR standards",
+          "Increased employee security awareness through policy training",
+          "Streamlined remote work security posture",
+          "Reduction in third-party risk via access control policies",
+          "Foundation laid for scalable ISMS adoption",
         ],
+
         technologies: [
-          "Palo Alto Networks",
-          "CrowdStrike",
-          "Splunk",
-          "Microsoft Sentinel",
-          "Okta",
-          "Cisco ISE",
+          "OneTrust",
+          "Vanta",
+          "Drata",
+          "Microsoft Purview",
+          "Google Workspace Security Center",
+          "AWS Artifact",
         ],
+
         metrics: {
-          endpointsSecured: "500+",
-          vulnerabilitiesFixed: "180",
-          complianceScore: "100%",
-          incidentReduction: "85%",
+          policiesDeployed: "12",
+          staffTrained: "150+",
+          complianceImprovement: "95%",
+          auditReadinessTimeReduced: "60%",
         },
       },
     },
     {
-      title: "Financial Services SOC",
-      subtitle: "24/7 monitoring • PCI DSS Level 1",
+      title: "Level 2: Growth – Scaling Startups",
+      subtitle:
+        "For teams onboarding clients, vendors, or preparing for due diligence",
       image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71",
       description:
-        "State-of-the-art Security Operations Center implementation for a regional bank, providing real-time threat detection and regulatory compliance.",
-      industry: "Financial Services",
+        "For Growing Startups: Advanced cybersecurity services to support client onboarding, vendor management, and due diligence.",
+      industry: "Startups & Scaleups (20-100 staff) ",
       projectSize: "Enterprise",
       timeline: "8 months",
       teamSize: "12 specialists",
       details: {
-        client: "First National Bank & Trust",
+        client: "TechScaleup Ltd. ",
         duration: "8 months",
         scope:
-          "Design and implementation of a state-of-the-art Security Operations Center serving 50+ branch locations",
-        challenges: [
-          "Meeting strict financial industry regulations (SOX, PCI DSS)",
-          "Protecting against sophisticated financial cyber threats",
-          "Ensuring 99.99% uptime for critical banking systems",
-          "Managing security across multiple legacy and modern systems",
-          "Real-time fraud detection requirements",
-          "Regulatory reporting and audit readiness",
+          "Comprehensive cybersecurity implementation for a tech scaleup with 20-100 employees",
+        price: "$299 - $499",
+        inclusions: [
+          "All Level 1 Policies",
+          "Third-Party Risk Management Policy",
+          "Vendor Risk Assessment Template",
+          "Business Continuity Plan (BCP)",
+          "Asset Management Policy",
+          "NDPR or GDPR Gap Assessment (Lite)",
+          "Security Awareness Module (Staff & Dev)",
+          "Data Inventory/Data Mapping Template",
+          "Roles & Responsibilities Matrix (RACI)",
         ],
-        solutions: [
-          "24/7 Security Operations Center with tier 1, 2, and 3 analysts",
-          "Advanced threat detection using machine learning and AI",
-          "Automated incident response playbooks",
-          "Regular penetration testing and vulnerability assessments",
-          "Comprehensive staff security training program",
-          "Integrated fraud detection and prevention system",
+
+        optional: [
+          "Audit Readiness Checklist",
+          "Internal Audit Template",
+          "GRC Maturity Assessment",
+          "Custom DPIA/RoPA Templates",
         ],
         results: [
-          "Detection time reduced from hours to minutes",
-          "Prevented 15+ attempted cyber attacks in first year",
-          "Achieved PCI DSS Level 1 compliance",
-          "99.97% system uptime maintained",
-          "40% reduction in false positive alerts",
-          "Regulatory audit passed with zero findings",
+          "Enhanced client onboarding security processes",
+          "Improved vendor risk management practices",
+          "Achieved 98% compliance with NDPR/GDPR standards",
+          "Streamlined data inventory and mapping procedures",
+          "Increased employee security awareness through training",
+          "Established foundation for future ISMS certification",
         ],
         technologies: [
-          "IBM QRadar",
-          "Carbon Black",
-          "Nessus",
-          "Metasploit",
-          "KnowBe4",
-          "RSA NetWitness",
+          "OneTrust",
+          "Vanta",
+          "Drata",
+          "Microsoft Purview",
+          "Google Workspace Security Center",
+          "AWS Artifact",
         ],
         metrics: {
-          threatsBlocked: "15,000+",
-          alertsProcessed: "2.1M",
-          responseTime: "< 5 minutes",
-          uptime: "99.97%",
+          policiesDeployed: "20",
+          staffTrained: "300+",
+          complianceImprovement: "98%",
+          vendorRiskReduction: "75%",
         },
       },
     },
     {
-      title: "Manufacturing Cybersecurity",
-      subtitle: "IoT security • Industry 4.0 ready",
+      title: "Level 3: Enterprise-Ready – Compliance-Driven",
+      subtitle:
+        "For Series A+ startups preparing for ISO or regulatory scrutiny",
       image: "https://images.unsplash.com/photo-1518770660439-4636190af475",
       description:
-        "Industrial control system security implementation for a smart manufacturing facility, protecting both IT and OT environments.",
-      industry: "Manufacturing",
-      projectSize: "Mid-Market",
+        "For Enterprise-Ready Startups: Comprehensive cybersecurity services to prepare for ISO certification or regulatory scrutiny.",
+      industry: "Startups & Scaleups (100+ staff) ",
+      projectSize: "Enterprise",
       timeline: "4 months",
       teamSize: "6 specialists",
       details: {
-        client: "TechManufacturing Corp",
+        client: "TechEnterprise Corp.",
         duration: "4 months",
         scope:
-          "Securing industrial IoT devices and operational technology across 3 manufacturing facilities",
-        challenges: [
-          "Securing legacy industrial control systems (ICS/SCADA)",
-          "Protecting IoT sensors and connected manufacturing equipment",
-          "Maintaining operational continuity during security upgrades",
-          "Bridging the gap between IT and OT security teams",
-          "Compliance with industry safety standards",
-          "Remote monitoring and management requirements",
+          "Comprehensive cybersecurity implementation for a tech enterprise with 100+ employees",
+        inclusions: [
+          "All Level 1 + 2 Content",
+          "ISMS Framework Documentation",
+          "Change Management Policy",
+          "Secure Development Policy (SDLC)",
+          "Code of Conduct & Ethics",
+          "Legal & Regulatory Compliance Register",
+          "Employee Onboarding/Offboarding GRC Kit/security policy",
+          "NDPR or GDPR Full Gap Assessment",
+          "Board-Level GRC Reporting Templates",
+          "Quarterly Audit Support (Internal/Prep)",
         ],
-        solutions: [
-          "Network segmentation between IT and OT environments",
-          "Implementation of industrial firewalls and monitoring systems",
-          "IoT device inventory and security assessment",
-          "Development of incident response procedures for OT environments",
-          "Cross-training for IT and OT security teams",
-          "Secure remote access solutions for maintenance",
+        price: "$899 - $1,499",
+        optional: [
+          "Internal Audit Template",
+          "Risk Register Template",
+          "Statement of Applicability (SoA) Template",
+          "Information Classification & Handling Guide",
+          "Quarterly GRC Review Schedule Template",
         ],
         results: [
-          "Secured 200+ IoT devices and industrial systems",
-          "Zero production downtime during implementation",
-          "Identified and remediated 30+ security vulnerabilities",
-          "Established unified IT/OT security management",
-          "15% improvement in operational efficiency",
-          "Achieved compliance with IEC 62443 standards",
+          "Achieved ISO 27001 certification readiness",
+          "Improved regulatory compliance posture",
+          "Enhanced employee security awareness through training",
+          "Streamlined change management processes",
+          "Established foundation for ongoing ISMS maintenance",
+          "Increased audit readiness and efficiency",
         ],
+
         technologies: [
-          "Claroty",
-          "Dragos",
-          "Nozomi Networks",
-          "Schneider Electric",
-          "Rockwell Automation",
-          "Fortinet",
+          "OneTrust",
+          "Vanta",
+          "Drata",
+          "Microsoft Purview",
+          "Google Workspace Security Center",
+          "AWS Artifact",
         ],
+
         metrics: {
-          devicesSecured: "200+",
-          downtime: "0 hours",
-          vulnerabilitiesFixed: "30+",
-          efficiencyGain: "15%",
+          policiesDeployed: "30",
+          staffTrained: "500+",
+          complianceImprovement: "99%",
+          auditReadinessTimeReduced: "80%",
         },
       },
     },
@@ -665,7 +687,7 @@ const Index = () => {
               style={{ animationDelay: "0.5s" }}
             >
               Your trusted cybersecurity partner, protecting businesses from
-              evolving digital threats with cutting-edge solutions and expert
+              evolving digital threats with cutting-edge optional and expert
               guidance.
             </p>
 
@@ -687,25 +709,31 @@ const Index = () => {
             </div> */}
 
             <div
-              className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in"
+              className="flex flex-col sm:flex-row gap-3 justify-center animate-fade-in"
               style={{ animationDelay: "1s" }}
             >
               <Button
-                size="lg"
-                className="bg-cyber-gradient hover:opacity-90 text-white px-4 py-5  rounded-full transition-all duration-300 transform hover:scale-105 font-semibold glow-effect"
+                className="bg-cyber-gradient hover:opacity-90 text-white 
+               px-4 py-2 text-xs sm:px-6 sm:py-3 sm:text-base 
+               rounded-full transition-all duration-300 transform 
+               hover:scale-105 font-semibold glow-effect w-40 sm:w-auto"
                 onClick={() => scrollToSection("portfolio")}
               >
                 View Portfolio
-                <ArrowRight className="ml-2 h-5 w-5" />
+                <ArrowRight className="ml-1 h-4 w-4 sm:ml-2 sm:h-5 sm:w-5" />
               </Button>
+
               <Button
                 variant="outline"
                 size="sm"
-                className="border-primary text-primary hover:bg-primary hover:text-primary-foreground px-4 py-5  rounded-full transition-all duration-300 transform hover:scale-105 font-semibold"
+                className="border-primary text-primary hover:bg-primary hover:text-primary-foreground 
+               px-4 py-2 text-xs sm:px-6 sm:py-3 sm:text-base 
+               rounded-full transition-all duration-300 transform 
+               hover:scale-105 font-semibold w-40 sm:w-auto"
                 onClick={() => scrollToSection("services")}
               >
                 Our Services
-                <Shield className="ml-2 h-5 w-5" />
+                <Shield className="ml-1 h-4 w-4 sm:ml-2 sm:h-5 sm:w-5" />
               </Button>
             </div>
           </div>
@@ -734,7 +762,7 @@ const Index = () => {
               experience, Avanzare is dedicated to protecting businesses from
               the ever-evolving landscape of cyber threats. We combine
               cutting-edge technology with human expertise to deliver
-              unparalleled security solutions.
+              unparalleled security optional.
             </p>
           </div>
 
@@ -1102,6 +1130,10 @@ const Index = () => {
                             <Briefcase className="h-4 w-4 text-primary" />
                             <strong>Scope:</strong> {project.details.scope}
                           </div>
+                          <div className="flex items-center gap-2">
+                            <DollarSign className="h-4 w-4 text-primary" />
+                            <strong>Price:</strong> {project.details.price}
+                          </div>
                         </div>
                       </div>
 
@@ -1126,18 +1158,21 @@ const Index = () => {
 
                     <div className="space-y-6">
                       <div>
-                        <h4 className="font-semibold text-xl mb-4 flex items-center gap-2">
-                          <AlertTriangle className="h-5 w-5 text-destructive" />
-                          Challenges Addressed
+                        <h4 className="font-semibold text-xl mb-4 flex items-center gap-2 text-primary">
+                          <ShieldCheck className="h-5 w-5 text-primary" />
+                          Core Inclusions
                         </h4>
-                        <ul className="grid md:grid-cols-2 gap-3">
-                          {project.details.challenges.map((challenge, idx) => (
+
+                        <ul className="grid md:grid-cols-2 gap-4">
+                          {project.details.inclusions.map((item, idx) => (
                             <li
                               key={idx}
-                              className="flex items-start gap-3 p-3 bg-destructive/10 rounded-lg"
+                              className="flex items-start gap-3 p-4 bg-muted rounded-xl border border-border shadow-sm hover:shadow-md transition-shadow"
                             >
-                              <AlertTriangle className="h-4 w-4 text-destructive mt-0.5 flex-shrink-0" />
-                              <span className="text-sm">{challenge}</span>
+                              <CheckCircle className="h-5 w-5 text-green-600 mt-0.5 flex-shrink-0" />
+                              <span className="text-sm text-muted-foreground">
+                                {item}
+                              </span>
                             </li>
                           ))}
                         </ul>
@@ -1146,16 +1181,16 @@ const Index = () => {
                       <div>
                         <h4 className="font-semibold text-xl mb-4 flex items-center gap-2">
                           <Brain className="h-5 w-5 text-primary" />
-                          Solutions Implemented
+                          Add-Ons (Optional)
                         </h4>
                         <ul className="grid md:grid-cols-2 gap-3">
-                          {project.details.solutions.map((solution, idx) => (
+                          {project.details.optional.map((optional, idx) => (
                             <li
                               key={idx}
                               className="flex items-start gap-3 p-3 bg-primary/10 rounded-lg"
                             >
                               <CheckCircle className="h-4 w-4 text-primary mt-0.5 flex-shrink-0" />
-                              <span className="text-sm">{solution}</span>
+                              <span className="text-sm">{optional}</span>
                             </li>
                           ))}
                         </ul>
@@ -1402,7 +1437,7 @@ const Index = () => {
                     className="transition-all duration-300 focus:scale-101"
                   />
                   <Textarea
-                    placeholder="Tell us about your cybersecurity needs and challenges..."
+                    placeholder="Tell us about your cybersecurity needs and inclusions..."
                     rows={4}
                     required
                     className="transition-all duration-300 focus:scale-101"
@@ -1433,7 +1468,7 @@ const Index = () => {
               </div>
               <p className="text-muted-foreground text-sm mb-4">
                 Protecting businesses from cyber threats with expert security
-                solutions and 24/7 monitoring.
+                optional and 24/7 monitoring.
               </p>
               <div className="flex items-center gap-2 text-sm text-muted-foreground">
                 <Award className="h-4 w-4" />
