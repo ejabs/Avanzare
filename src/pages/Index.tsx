@@ -709,31 +709,24 @@ const Index = () => {
             </div> */}
 
             <div
-              className="flex flex-col sm:flex-row gap-3 justify-center animate-fade-in"
+              className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in"
               style={{ animationDelay: "1s" }}
             >
               <Button
-                className="bg-cyber-gradient hover:opacity-90 text-white 
-               px-4 py-2 text-xs sm:px-6 sm:py-3 sm:text-base 
-               rounded-full transition-all duration-300 transform 
-               hover:scale-105 font-semibold glow-effect w-40 sm:w-auto"
+                className="  bg-cyber-gradient hover:opacity-90 text-white px-3 py-5   rounded-sm transition-all duration-300 transform hover:scale-105 font-semibold glow-effect"
                 onClick={() => scrollToSection("portfolio")}
               >
                 View Portfolio
-                <ArrowRight className="ml-1 h-4 w-4 sm:ml-2 sm:h-5 sm:w-5" />
+                <ArrowRight className="ml-0 h-5 w-5" />
               </Button>
-
               <Button
                 variant="outline"
                 size="sm"
-                className="border-primary text-primary hover:bg-primary hover:text-primary-foreground 
-               px-4 py-2 text-xs sm:px-6 sm:py-3 sm:text-base 
-               rounded-full transition-all duration-300 transform 
-               hover:scale-105 font-semibold w-40 sm:w-auto"
+                className="border-primary text-primary hover:bg-primary hover:text-primary-foreground px-4 py-5  rounded-sm transition-all duration-300 transform hover:scale-105 font-semibold"
                 onClick={() => scrollToSection("services")}
               >
                 Our Services
-                <Shield className="ml-1 h-4 w-4 sm:ml-2 sm:h-5 sm:w-5" />
+                <Shield className="ml-0 h-5 w-5" />
               </Button>
             </div>
           </div>
