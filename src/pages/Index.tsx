@@ -1196,6 +1196,14 @@ const Index = () => {
                           ))}
                         </ul>
                       </div>
+
+                      <Button
+                        variant="outline"
+                        className="w-full group-hover:bg-primary group-hover:text-primary-foreground transition-all duration-300"
+                      >
+                        <ExternalLink className="h-4 w-4 mr-2" />
+                        Get Package
+                      </Button>
                     </div>
                   </div>
                 </DialogContent>
