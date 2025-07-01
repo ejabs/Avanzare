@@ -636,7 +636,6 @@ const Index = () => {
           </div>
         )}
       </nav>
-
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center cyber-grid-bg overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-accent/10"></div>
@@ -732,15 +731,14 @@ const Index = () => {
           </div>
         </div>
       </section>
-
-      {/* About Section */}
+      {/* About section */}
       <section
         id="about"
         className="py-20 bg-muted/30 relative overflow-hidden"
       >
         <div className="absolute inset-0 cyber-grid-bg opacity-30"></div>
         <div className="container mx-auto px-4 relative z-10">
-          <div className="text-center mb-16 animate-fade-in">
+          {/* <div className="text-center mb-16 animate-fade-in">
             <Badge
               variant="secondary"
               className="mb-4 px-4 py-2 text-xl font-semibold"
@@ -781,10 +779,10 @@ const Index = () => {
                 </CardContent>
               </Card>
             ))}
-          </div>
+          </div> */}
 
           {/* Company Stats */}
-          <div className="grid md:grid-cols-4 gap-8 mb-16">
+          {/* <div className="grid md:grid-cols-4 gap-8 mb-16">
             {stats.map((stat, index) => (
               <div key={index} className="text-center group">
                 <div className="relative inline-block mb-4">
@@ -801,7 +799,7 @@ const Index = () => {
                 </div>
               </div>
             ))}
-          </div>
+          </div> */}
 
           {/* Certifications */}
           <div className="text-center">
@@ -827,7 +825,7 @@ const Index = () => {
       </section>
 
       {/* Services Section */}
-      <section id="services" className="py-20 relative overflow-hidden">
+      {/* <section id="services" className="py-20 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-accent/5"></div>
         <div className="container mx-auto px-4 relative z-10">
           <div className="text-center mb-16 animate-fade-in">
@@ -959,23 +957,13 @@ const Index = () => {
                     </div>
                   </div>
 
-                  {/* <div className="flex gap-3 mt-6">
-                    <Button className="flex-1 bg-cyber-gradient hover:opacity-90">
-                      Request Quote
-                      <Mail className="ml-2 h-4 w-4" />
-                    </Button>
-                    <Button variant="outline" className="flex-1">
-                      Schedule Consultation
-                      <Calendar className="ml-2 h-4 w-4" />
-                    </Button>
-                  </div> */}
+                 
                 </DialogContent>
               </Dialog>
             ))}
           </div>
         </div>
-      </section>
-
+      </section> */}
       {/* Packages Section */}
       <section
         id="portfolio"
@@ -1216,7 +1204,6 @@ const Index = () => {
           </div>
         </div>
       </section>
-
       {/* Testimonials Section */}
       <section className="py-20 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-accent/5 to-primary/5"></div>
@@ -1283,7 +1270,6 @@ const Index = () => {
           </div>
         </div>
       </section>
-
       {/* Contact Section */}
       <section
         id="contact"
@@ -1448,7 +1434,6 @@ const Index = () => {
           </div>
         </div>
       </section>
-
       {/* Footer */}
       <footer className="bg-card border-t py-12 relative overflow-hidden">
         <div className="absolute inset-0 cyber-grid-bg opacity-10"></div>
