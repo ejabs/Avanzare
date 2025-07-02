@@ -1559,29 +1559,14 @@ const Index = () => {
                 <li className="hover:text-primary transition-colors flex items-center gap-2">
                   <ArrowRight className="h-3 w-3" /> ISO 27001
                 </li>
-                <li>
-                  <a
-                    href="#"
-                    className="hover:text-primary transition-colors flex items-center gap-2"
-                  >
-                    <ArrowRight className="h-3 w-3" /> NIST
-                  </a>
+                <li className="hover:text-primary transition-colors flex items-center gap-2">
+                  <ArrowRight className="h-3 w-3" /> NIST
                 </li>
-                <li>
-                  <a
-                    href="#"
-                    className="hover:text-primary transition-colors flex items-center gap-2"
-                  >
-                    <ArrowRight className="h-3 w-3" /> GDPR
-                  </a>
+                <li className="hover:text-primary transition-colors flex items-center gap-2">
+                  <ArrowRight className="h-3 w-3" /> GDPR
                 </li>
-                <li>
-                  <a
-                    href="#"
-                    className="hover:text-primary transition-colors flex items-center gap-2"
-                  >
-                    <ArrowRight className="h-3 w-3" /> Real-world audits
-                  </a>
+                <li className="hover:text-primary transition-colors flex items-center gap-2">
+                  <ArrowRight className="h-3 w-3" /> Real-world audits
                 </li>
               </ul>
             </div>
