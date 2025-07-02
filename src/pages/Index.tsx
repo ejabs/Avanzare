@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
+
 import {
   Card,
   CardContent,
@@ -26,6 +27,7 @@ import {
   Sun,
   Mail,
   Phone,
+  Loader2,
   Globe,
   Server,
   Database,
@@ -59,6 +61,9 @@ import { useToast } from "@/hooks/use-toast";
 const Index = () => {
   const [darkMode, setDarkMode] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [loadingStates, setLoadingStates] = useState<Record<number, boolean>>(
+    {}
+  );
   const { toast } = useToast();
 
   useEffect(() => {
@@ -87,6 +92,14 @@ const Index = () => {
       description:
         "Our cybersecurity experts will get back to you within 24 hours.",
     });
+  };
+
+  const handleGetPackageClick = (index: number) => {
+    setLoadingStates((prev) => ({ ...prev, [index]: true }));
+    setTimeout(() => {
+      window.open("https://forms.gle/UmCRZi1RUC9kjib98", "_blank");
+      setLoadingStates((prev) => ({ ...prev, [index]: false }));
+    }, 1000);
   };
 
   const services = [
@@ -246,15 +259,15 @@ const Index = () => {
         "For Early Stage Startups: Foundational cybersecurity services to establish a secure environment for your business.",
       industry: "Startups",
       projectSize: "Enterprise",
-      timeline: "6 months",
-      teamSize: "8 specialists",
+      timeline: "5-7 Days",
+      teamSize: " 15 Personnel",
       details: {
-        client: "TechStartup Inc.",
-        duration: "6 months",
+        client: "",
+        duration: "5-7 Days",
 
         scope:
-          "Comprehensive cybersecurity implementation for a tech startup with less than 20 employees",
-        price: "$99 - $199",
+          "Comprehensive cybersecurity implementation for a tech startup with 15 employees",
+        price: "Starting from $300",
         inclusions: [
           "Acceptable Use Policy",
           "Information Security Policy",
@@ -294,12 +307,7 @@ const Index = () => {
           "AWS Artifact",
         ],
 
-        metrics: {
-          policiesDeployed: "12",
-          staffTrained: "150+",
-          complianceImprovement: "95%",
-          auditReadinessTimeReduced: "60%",
-        },
+        metrics: {},
       },
     },
     {
@@ -309,16 +317,16 @@ const Index = () => {
       image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71",
       description:
         "For Growing Startups: Advanced cybersecurity services to support client onboarding, vendor management, and due diligence.",
-      industry: "Startups & Scaleups (20-100 staff) ",
+      industry: "Startups & Scaleups (20 staff) ",
       projectSize: "Enterprise",
-      timeline: "8 months",
-      teamSize: "12 specialists",
+      timeline: "10-14 Days",
+      teamSize: "20 Personnel",
       details: {
-        client: "TechScaleup Ltd. ",
-        duration: "8 months",
+        client: "",
+        duration: "10-14 Days",
         scope:
-          "Comprehensive cybersecurity implementation for a tech scaleup with 20-100 employees",
-        price: "$299 - $499",
+          "Comprehensive cybersecurity implementation for a tech scaleup with 20 employees",
+        price: "Starting from $600",
         inclusions: [
           "All Level 1 Policies",
           "Third-Party Risk Management Policy",
@@ -353,12 +361,7 @@ const Index = () => {
           "Google Workspace Security Center",
           "AWS Artifact",
         ],
-        metrics: {
-          policiesDeployed: "20",
-          staffTrained: "300+",
-          complianceImprovement: "98%",
-          vendorRiskReduction: "75%",
-        },
+        metrics: {},
       },
     },
     {
@@ -368,15 +371,15 @@ const Index = () => {
       image: "https://images.unsplash.com/photo-1518770660439-4636190af475",
       description:
         "For Enterprise-Ready Startups: Comprehensive cybersecurity services to prepare for ISO certification or regulatory scrutiny.",
-      industry: "Startups & Scaleups (100+ staff) ",
+      industry: "Startups & Scaleups (30 Staff) ",
       projectSize: "Enterprise",
-      timeline: "4 months",
-      teamSize: "6 specialists",
+      timeline: "15-30 Days",
+      teamSize: "30 Personnel",
       details: {
-        client: "TechEnterprise Corp.",
-        duration: "4 months",
+        client: "",
+        duration: "15-30 Days",
         scope:
-          "Comprehensive cybersecurity implementation for a tech enterprise with 100+ employees",
+          "Comprehensive cybersecurity implementation for a tech enterprise with 30 employees",
         inclusions: [
           "All Level 1 + 2 Content",
           "ISMS Framework Documentation",
@@ -389,7 +392,7 @@ const Index = () => {
           "Board-Level GRC Reporting Templates",
           "Quarterly Audit Support (Internal/Prep)",
         ],
-        price: "$899 - $1,499",
+        price: "Starting from $1,000",
         optional: [
           "Internal Audit Template",
           "Risk Register Template",
@@ -415,12 +418,7 @@ const Index = () => {
           "AWS Artifact",
         ],
 
-        metrics: {
-          policiesDeployed: "30",
-          staffTrained: "500+",
-          complianceImprovement: "99%",
-          auditReadinessTimeReduced: "80%",
-        },
+        metrics: {},
       },
     },
   ];
@@ -531,7 +529,7 @@ const Index = () => {
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-6">
-            <button
+            {/* <button
               onClick={() => scrollToSection("about")}
               className="hover:text-primary transition-all duration-300 font-medium relative group"
             >
@@ -544,7 +542,7 @@ const Index = () => {
             >
               Services
               <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
-            </button>
+            </button> */}
             <button
               onClick={() => scrollToSection("portfolio")}
               className="hover:text-primary transition-all duration-300 font-medium relative group"
@@ -608,7 +606,7 @@ const Index = () => {
         {mobileMenuOpen && (
           <div className="md:hidden bg-background/95 backdrop-blur-lg border-t border-border">
             <div className="container mx-auto px-4 py-4 space-y-4">
-              <button
+              {/* <button
                 onClick={() => scrollToSection("about")}
                 className="block w-full text-left py-2 hover:text-primary transition-colors font-medium"
               >
@@ -619,7 +617,7 @@ const Index = () => {
                 className="block w-full text-left py-2 hover:text-primary transition-colors font-medium"
               >
                 Services
-              </button>
+              </button> */}
               <button
                 onClick={() => scrollToSection("portfolio")}
                 className="block w-full text-left py-2 hover:text-primary transition-colors font-medium"
@@ -722,9 +720,9 @@ const Index = () => {
                 variant="outline"
                 size="sm"
                 className="border-primary text-primary hover:bg-primary hover:text-primary-foreground px-4 py-5  rounded-sm transition-all duration-300 transform hover:scale-105 font-semibold"
-                onClick={() => scrollToSection("services")}
+                onClick={() => scrollToSection("portfolio")}
               >
-                Our Services
+                Our Packages
                 <Shield className="ml-0 h-5 w-5" />
               </Button>
             </div>
@@ -1073,7 +1071,7 @@ const Index = () => {
                     />
 
                     {/* Key Metrics */}
-                    <div className="grid grid-cols-2 md:grid-cols-4 gap-4 p-6 bg-muted/50 rounded-lg">
+                    {/* <div className="grid grid-cols-2 md:grid-cols-4 gap-4 p-6 bg-muted/50 rounded-lg">
                       {Object.entries(project.details.metrics).map(
                         ([key, value], idx) => (
                           <div key={idx} className="text-center">
@@ -1086,7 +1084,7 @@ const Index = () => {
                           </div>
                         )
                       )}
-                    </div>
+                    </div> */}
 
                     <div className="grid md:grid-cols-2 gap-8">
                       <div>
@@ -1118,7 +1116,7 @@ const Index = () => {
                         </div>
                       </div>
 
-                      <div>
+                      {/* <div>
                         <h4 className="font-semibold text-xl mb-4 flex items-center gap-2">
                           <Cpu className="h-5 w-5 text-primary" />
                           Technologies Used
@@ -1134,7 +1132,7 @@ const Index = () => {
                             </Badge>
                           ))}
                         </div>
-                      </div>
+                      </div> */}
                     </div>
 
                     <div className="space-y-6">
@@ -1199,10 +1197,21 @@ const Index = () => {
 
                       <Button
                         variant="outline"
-                        className="w-full group-hover:bg-primary group-hover:text-primary-foreground transition-all duration-300"
+                        className="w-full group-hover:bg-primary group-hover:text-primary-foreground transition-all duration-300 flex items-center justify-center"
+                        onClick={() => handleGetPackageClick(index)}
+                        disabled={loadingStates[index]}
                       >
-                        <ExternalLink className="h-4 w-4 mr-2" />
-                        Get Package
+                        {loadingStates[index] ? (
+                          <>
+                            <Loader2 className="h-4 w-4 mr-2 animate-spin" />
+                            Loading...
+                          </>
+                        ) : (
+                          <>
+                            <ExternalLink className="h-4 w-4 mr-2" />
+                            Get Package
+                          </>
+                        )}
                       </Button>
                     </div>
                   </div>
