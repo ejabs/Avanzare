@@ -55,6 +55,10 @@ import {
   Menu,
   X,
   DollarSign,
+  PhoneCall,
+  MessageCircle,
+  Linkedin,
+  Twitter,
 } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 
@@ -425,30 +429,34 @@ const Index = () => {
 
   const testimonials = [
     {
-      name: "Sarah Johnson",
-      position: "CTO",
-      company: "TechCorp Solutions",
-      image: "https://images.unsplash.com/photo-1494790108755-2616b612b786",
+      name: "Ejabena Joshua",
+      position: "CEO",
+      company: "JPTech Solutions",
+      image:
+        "https://upload.wikimedia.org/wikipedia/commons/9/99/Sample_User_Icon.png",
       rating: 5,
-      text: "Avanzare's penetration testing revealed critical vulnerabilities we never knew existed. Their professional approach and detailed reporting helped us strengthen our security posture significantly. The ROI was immediate.",
-      project: "Penetration Testing & Vulnerability Assessment",
+      text: "We never had any policies until we needed to onboard a client. GRC Startup Hub got us investor-ready in 2 weeks. Their team was professional, responsive, and delivered high-quality work.",
+      project: "GRC Implementation for JPTech Solutions",
     },
+
     {
-      name: "Michael Chen",
+      name: "Vidhya Ria",
       position: "CISO",
-      company: "Healthcare Partners",
-      image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e",
+      company: "Tech Innovators",
+      image:
+        "https://upload.wikimedia.org/wikipedia/commons/9/99/Sample_User_Icon.png",
       rating: 5,
-      text: "Outstanding service! Their team helped us achieve HIPAA compliance and implement robust data protection measures. The 24/7 support has been invaluable for our operations. Highly recommended for healthcare organizations.",
-      project: "Healthcare Security Implementation",
+      text: "The documents were clean, actionable, and easy to tweak. Perfect for a startup like mine. Their team was knowledgeable and guided us through the process seamlessly.",
+      project: "GRC Implementation for Tech Innovators",
     },
     {
-      name: "David Rodriguez",
+      name: "David Ajiboye",
       position: "IT Director",
-      company: "Financial Services Inc",
-      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d",
+      company: "Financial Services",
+      image:
+        "https://upload.wikimedia.org/wikipedia/commons/9/99/Sample_User_Icon.png",
       rating: 5,
-      text: "The 24/7 monitoring service has been invaluable. CyberShield detected and prevented several attempted breaches, saving us from potential disasters. Their incident response time is remarkable.",
+      text: "The 24/7 monitoring service has been invaluable. They detected and prevented several attempted breaches, saving us from potential disasters. Their incident response time is remarkable.",
       project: "SOC Implementation & Monitoring",
     },
   ];
@@ -462,13 +470,13 @@ const Index = () => {
 
   const certifications = [
     { name: "ISO 27001", description: "Information Security Management" },
-    { name: "SOC 2 Type II", description: "Security & Availability" },
+    { name: "SOC 2 ", description: "Security & Availability" },
     {
-      name: "CISSP",
+      name: "NIST",
       description: "Certified Information Systems Security Professional",
     },
-    { name: "CEH", description: "Certified Ethical Hacker" },
-    { name: "CISM", description: "Certified Information Security Manager" },
+    { name: "HIPPA", description: "Certified Ethical Hacker" },
+    { name: "GDPR", description: "Certified Information Security Manager" },
     {
       name: "PCI DSS",
       description: "Payment Card Industry Data Security Standard",
@@ -484,6 +492,7 @@ const Index = () => {
       details:
         "Our team holds multiple industry certifications and has worked with Fortune 500 companies",
     },
+
     {
       icon: Clock,
       title: "24/7 Security Operations",
@@ -492,6 +501,7 @@ const Index = () => {
       details:
         "Our Security Operations Center never sleeps, providing continuous protection for your assets",
     },
+
     {
       icon: CheckCircle,
       title: "Compliance Ready",
@@ -674,18 +684,18 @@ const Index = () => {
             </div>
 
             <h1 className="text-7xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent animate-slide-in">
-              Secure Today.
+              GRC
               <br />
-              Defend Tomorrow.
+              Startup Hub.
             </h1>
 
             <p
               className="text-lg md:text-lg text-muted-foreground mb-6 max-w-3xl mx-auto font-medium animate-fade-in text-white"
               style={{ animationDelay: "0.5s" }}
             >
-              Your trusted cybersecurity partner, protecting businesses from
-              evolving digital threats with cutting-edge solutions and expert
-              guidance.
+              Governance, Risk & Compliance Made Simple for Startups Build
+              trust, protect data, and get investor-ready — without the
+              overwhelm.
             </p>
 
             {/* <div
@@ -803,7 +813,7 @@ const Index = () => {
           <div className="text-center">
             <h3 className="text-2xl font-semibold mb-8 flex items-center justify-center gap-2">
               <Award className="h-6 w-6 text-primary" />
-              Our Certifications & Compliance
+              Frameworks
             </h3>
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
               {certifications.map((cert, index) => (
@@ -977,7 +987,7 @@ const Index = () => {
               Our Packages
             </Badge>
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              CyberSecurity Packages
+              GRC Startup Packages
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
               Discover how we've helped organizations across various industries
@@ -1287,6 +1297,33 @@ const Index = () => {
           </div>
         </div>
       </section>
+
+      {/* CTA */}
+      <section className="bg-muted py-12 px-6 rounded-xl shadow-lg text-center mt-12">
+        <div className="max-w-2xl mx-auto space-y-4">
+          <div className="flex justify-center">
+            <PhoneCall className="h-8 w-8 text-primary" />
+          </div>
+          <h2 className="text-2xl md:text-3xl font-bold text-foreground">
+            Need Help Choosing a Package?
+          </h2>
+          <p className="text-muted-foreground text-lg">
+            Book a free 15-min clarity call. We’ll recommend what you actually
+            need and nothing you don’t.
+          </p>
+          <a
+            href="https://calendly.com/your-link" // Replace with your actual booking link
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Button className="mt-4 inline-flex items-center gap-2 group text-lg px-6 py-4">
+              Book Call
+              <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />
+            </Button>
+          </a>
+        </div>
+      </section>
+
       {/* Contact Section */}
       <section
         id="contact"
@@ -1324,9 +1361,9 @@ const Index = () => {
                       <Mail className="h-6 w-6 text-primary" />
                     </div>
                     <div>
-                      <p className="font-semibold">Email Us</p>
+                      <p className="font-semibold">Email </p>
                       <p className="text-muted-foreground font-mono">
-                        contact@avanzare.com
+                        adeoluwaob@gmail.com
                       </p>
                       <p className="text-sm text-muted-foreground">
                         Response within 2 hours
@@ -1341,9 +1378,9 @@ const Index = () => {
                       <Phone className="h-6 w-6 text-accent" />
                     </div>
                     <div>
-                      <p className="font-semibold">Call Us</p>
+                      <p className="font-semibold">Call</p>
                       <p className="text-muted-foreground font-mono">
-                        +234 123-4567
+                        +234-8101419681
                       </p>
                       <p className="text-sm text-muted-foreground">
                         24/7 Emergency Hotline
@@ -1353,6 +1390,40 @@ const Index = () => {
                 </Card>
 
                 <Card className="p-6 hover:shadow-lg transition-all duration-300 border-0 bg-card/50 backdrop-blur-sm">
+                  <div className="flex items-center gap-6 justify-left">
+                    {/* X / Twitter */}
+                    <a
+                      href="https://twitter.com/yourhandle" // replace with your Twitter/X URL
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="p-3 bg-primary/10 rounded-full hover:bg-primary/20 transition-colors"
+                    >
+                      <Twitter className="h-6 w-6 text-primary" />
+                    </a>
+
+                    {/* LinkedIn */}
+                    <a
+                      href="https://linkedin.com/in/yourhandle" // replace with your LinkedIn URL
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="p-3 bg-primary/10 rounded-full hover:bg-primary/20 transition-colors"
+                    >
+                      <Linkedin className="h-6 w-6 text-primary" />
+                    </a>
+
+                    {/* WhatsApp */}
+                    <a
+                      href="https://wa.me/2348000000000" // replace with your WhatsApp number
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="p-3 bg-primary/10 rounded-full hover:bg-primary/20 transition-colors"
+                    >
+                      <MessageCircle className="h-6 w-6 text-primary" />
+                    </a>
+                  </div>
+                </Card>
+
+                {/* <Card className="p-6 hover:shadow-lg transition-all duration-300 border-0 bg-card/50 backdrop-blur-sm">
                   <div className="flex items-center gap-4">
                     <div className="p-3 bg-primary/10 rounded-full">
                       <MapPin className="h-6 w-6 text-primary" />
@@ -1369,7 +1440,7 @@ const Index = () => {
                       </p>
                     </div>
                   </div>
-                </Card>
+                </Card> */}
               </div>
 
               {/* Quick Stats */}
@@ -1471,8 +1542,7 @@ const Index = () => {
                 </Link>
               </div>
               <p className="text-muted-foreground text-sm mb-4">
-                Protecting businesses from cyber threats with expert security
-                optional and 24/7 monitoring.
+                Built with Compliance in Mind.
               </p>
               <div className="flex items-center gap-2 text-sm text-muted-foreground">
                 <Award className="h-4 w-4" />
@@ -1483,15 +1553,18 @@ const Index = () => {
             <div>
               <h4 className="font-semibold mb-4 flex items-center gap-2">
                 <Server className="h-4 w-4 text-primary" />
-                Services
+                We follow best practices based on:
               </h4>
               <ul className="space-y-2 text-sm text-muted-foreground">
+                <li className="hover:text-primary transition-colors flex items-center gap-2">
+                  <ArrowRight className="h-3 w-3" /> ISO 27001
+                </li>
                 <li>
                   <a
                     href="#"
                     className="hover:text-primary transition-colors flex items-center gap-2"
                   >
-                    <ArrowRight className="h-3 w-3" /> Vulnerability Assessment
+                    <ArrowRight className="h-3 w-3" /> NIST
                   </a>
                 </li>
                 <li>
@@ -1499,7 +1572,7 @@ const Index = () => {
                     href="#"
                     className="hover:text-primary transition-colors flex items-center gap-2"
                   >
-                    <ArrowRight className="h-3 w-3" /> Penetration Testing
+                    <ArrowRight className="h-3 w-3" /> GDPR
                   </a>
                 </li>
                 <li>
@@ -1507,15 +1580,7 @@ const Index = () => {
                     href="#"
                     className="hover:text-primary transition-colors flex items-center gap-2"
                   >
-                    <ArrowRight className="h-3 w-3" /> Security Training
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    className="hover:text-primary transition-colors flex items-center gap-2"
-                  >
-                    <ArrowRight className="h-3 w-3" /> Incident Response
+                    <ArrowRight className="h-3 w-3" /> Real-world audits
                   </a>
                 </li>
               </ul>
@@ -1530,33 +1595,25 @@ const Index = () => {
                 <li>
                   <a
                     href="#"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      scrollToSection("portfolio");
+                    }}
                     className="hover:text-primary transition-colors flex items-center gap-2"
                   >
-                    <ArrowRight className="h-3 w-3" /> About Us
+                    <ArrowRight className="h-3 w-3" /> Packages
                   </a>
                 </li>
                 <li>
                   <a
                     href="#"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      scrollToSection("contact");
+                    }}
                     className="hover:text-primary transition-colors flex items-center gap-2"
                   >
-                    <ArrowRight className="h-3 w-3" /> Careers
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    className="hover:text-primary transition-colors flex items-center gap-2"
-                  >
-                    <ArrowRight className="h-3 w-3" /> Blog
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    className="hover:text-primary transition-colors flex items-center gap-2"
-                  >
-                    <ArrowRight className="h-3 w-3" /> News
+                    <ArrowRight className="h-3 w-3" /> Contact
                   </a>
                 </li>
               </ul>
