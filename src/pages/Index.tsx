@@ -456,7 +456,7 @@ const Index = () => {
       image:
         "https://upload.wikimedia.org/wikipedia/commons/9/99/Sample_User_Icon.png",
       rating: 5,
-      text: "The 24/7 monitoring service has been invaluable. They detected and prevented several attempted breaches, saving us from potential disasters. Their incident response time is remarkable.",
+      text: "The 24/7 monitoring service has been invaluable. They detected and prevented several attempted breaches, saving us from potential disasters. Their response time is remarkable.",
       project: "SOC Implementation & Monitoring",
     },
   ];
